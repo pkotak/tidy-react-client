@@ -1,9 +1,9 @@
 let _singleton = Symbol();
-const BASE_URL = 'localhost:5000';
+const BASE_URL = 'http://localhost:5000';
 export default class UserService{
-    constructor(singletonToken){
-        if(_singleton != singletonToken)
-            throw new Error('Cannot instantiate')
+    constructor(singletonToken) {
+        if (_singleton !== singletonToken)
+            throw new Error('Cannot instantiate');
     }
 
     static get instance(){
